@@ -1,0 +1,71 @@
+body {
+  padding: 10px;
+  background: black;
+}
+
+.wrap {
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 10px;
+  background: gray;
+  padding-bottom: 40px;
+  box-shadow: 0px 40px 60px -20px rgba(0, 0, 0, 0.2);
+  min-width: 420px;
+}
+
+h1 {
+  padding: 5px;
+  color: black;
+  font-family: Papyrus;
+  font-size: 35px;
+  font-weight: 50;
+  border-style: inset;
+  border-color: gray;
+  border-width: 10px;
+}
+
+.yin_yang {
+  width: 360px;
+  height: 180px;
+  display: inline-block;
+  background: red;
+  border: 7.5px solid black;
+  border-width: 7.5px 7.5px 187.5px 7.5px;
+  border-radius: 50%;
+  position: relative;
+  animation: yinyang 2s linear infinite;
+}
+.yin_yang:before, .yin_yang:after {
+  content: "";
+  position: absolute;
+}
+.yin_yang:before {
+  top: 50%;
+  left: 0;
+  background: red;
+  border: 68px solid black;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+.yin_yang:after {
+  top: 50%;
+  left: 50%;
+  background: black;
+  border: 68px solid red;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+@keyframes yinyang {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(100deg) scale(0.1);
+  }
+  100% {
+    transform: rotate(760deg) scale(0.5);
+  }
+}
